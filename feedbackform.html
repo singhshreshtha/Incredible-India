@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>feedback form</title>
+	<script type="text/javascript">
+		function display()
+		{
+			alert("The Feedback Form is Successfully Submitted.");
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="style4.css">
+</head>
+<body>
+	<div class="regform">
+		<p class="form-heading">Feedback Form for the Tour</p>
+		<form id="travel-form" name="travel-form" method="post" action="feedbackformdb.php" onsubmit="verifiedtravelform" onreset="showtravelform()">
+			<div class="form-head">
+				<span class="text-head-red">Travel Details</span>
+			</div><br><br><br><br>
+			<div class="left-one"><br>
+	    <div id="details">
+			<label>Your Name:</label><br>
+			<input type="text" name="user" id="fuser" class="inpt"><br>
+			<span id="text"></span>
+		</div>
+		<div id="details">
+			<label>Your Email:</label><br>
+			<input type="text" name="email" id="email" class="inpt"><br>
+			<span id="text1"></span>
+		</div>
+		<div id="details">
+			<label>Your Country Of Residence</label><br><br>
+			<select name="Country" id="Country">
+					<option value="" selected="selected" disabled="disabled">Select your country</option>
+					<option value="1">India</option>
+					<option value="2">USA</option>
+					<option value="3">England</option>	
+					</select>
+					<span id="text2"></span>
+		</div><br>
+		<div id="details">
+			<label>Date Of Birth:</label><br><br>
+			<input type="date" name="dob" id="Dob" class="inpt"><br>
+			<span id="text3"></span>
+		</div><br>
+		<div id="details">
+			<label>Your Mobile Number:</label><br>
+			<input type="text" name="numb" id="number" class="inpt"><br>
+			<span id="text4"></span>
+		</div>
+		<div id="details">
+			<label>Arrival Date:</label><br>
+			<select name="Date_of_travel" id="Date_of_travel">
+					<option value="Date" selected="selected" disabled="disabled">Date</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+					</select>
+	<script type="text/javascript" language="js">FillDropDown(1,31,"Date_of_travel","Date");</script>	
+		<select name="Month_of_travel" id="Month_of_travel">
+					<option value="Month" selected="selected" disabled="disabled">Month</option>
+					<option value="January">January</option>
+					<option value="February">February</option>
+					<option value="March">March</option>
+					<option value="April">April</option>
+					<option value="May">May</option>
+					<option value="June">June</option>
+					<option value="July">July</option>
+					<option value="August">August</option>
+					<option value="September">September</option>
+					<option value="October">October</option>
+					<option value="November">November</option>
+					<option value="December">December</option>	
+					</select>
+		<script type="text/javascript" language="js">FillMonth("Month_of_travel);</script>
+		<select name="Year_of_travel" id="Year_of_travel">
+					<option value="Year" selected="selected" disabled="disabled">Year</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+					<option value="2022">2022</option>
+					<option value="2023">2023</option>
+					<option value="2024">2024</option>
+					</select>
+		<script type="text/javascript" language="js">CurrentFullDate = new Date();
+		CurrentYear = CurrentFullDate.getFullYear();
+		EndYear = CurrentYear + 5;
+		FillDropDown(CurrentYear,EndYear,"Year_of_travel","Year");
+		</script>			
+			<span id="text5"></span>
+		</div>
+	</div>
+
+	<div class="right-one"><br>
+	<div id="details">
+			<label>Tour Duration:</label><br><br>
+			<select name="no_of_nights" id="no_of_nights">
+					<option value="Days" selected="selected" disabled="disabled">Days</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31+">31+</option>
+					</select>
+	<script type="text/javascript" language="js">FillDropDown(1,30,"no_of_nights","Days");
+	    document.getElementById("no_of_nights").options[document.getElementById("no_of_nights").length] = new option("31+","31+");
+    </script>	
+    <span id="text6"></span>
+</div><br>
+
+
+		<div id="details">
+			<label>Destination Interested In:</label><br><br>
+			<select name="destinations" id="destinations">
+					<option value="Select Destination" selected="selected" disabled="disabled">Select Destination</option>
+					<option value="Andhra Pradesh">Andhra Pradesh</option>
+					<option value="Himanchal Prradesh">Himanchal Prradesh</option>
+					<option value="Uttarakhand">Uttarakhand</option>
+					<option value="Maharastra">Maharastra</option>
+					<option value="Goa">Goa</option>
+					<option value="Bangalore">Bangalore</option>
+					<option value="Sikkim">sikkim</option>
+					<option value="Uttar Pradesh">Uttar Pradesh</option>
+					<option value="Punjab">Punjab</option>
+					<option value="Jammu & Kashmir">Jammu & Kashmir</option>
+					<option value="New Delhi">New Delhi</option>
+					<option value="Rajasthan">Rajasthan</option>
+					<option value="Aasam">Aasam</option>
+					<option value="Other - Not Sure">Other - Not Sure</option>
+				</select>
+	<span id="text7"></span>
+		</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div id="details">
+			<input type="submit" id="submit-button" value="Submit" onclick="display()">
+		</div>	
+				
+		</form>
+		
+	</div>
+
+</body>
+</html>
